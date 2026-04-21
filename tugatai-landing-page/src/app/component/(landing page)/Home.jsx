@@ -1,0 +1,101 @@
+"use client";
+import React from "react";
+import Container from "../Container";
+import { motion } from "framer-motion";
+import { FiPlay, FiArrowRight } from "react-icons/fi";
+
+const Home = () => {
+  return (
+    <section 
+      id="home" 
+      className="relative  bg-black overflow-hidden flex items-center pt-24 pb-12"
+    >
+
+      <Container >
+        <div className=" grid md:grid-cols-2 gap-5  items-center">
+          
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-center md:items-start gap-6 "
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="px-4 py-1.5 rounded-full border border-purple-500/30 bg-[#AD46FF]/10 backdrop-blur-sm "
+            >
+              <span className="text-sm font-inter font-medium text-purple-300 flex items-center gap-2 ">
+                <span className="w-2 h-2 rounded-full bg-purple-500 t " />
+                AI-Powered Business Automation
+              </span>
+            </motion.div>
+
+            {/* Heading */}
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient bg-gradient-to-r from-[#ffffff] via-[#E9D4FF] to-[#ffffff] bg-clip-text text-transparent leading-[1.1] font-inter text-center md:text-start">
+            AI Voice & Chat Agent for Business
+            </h1>
+
+            {/* Subheading */}
+            <p className="text-lg md:text-xl text-[#DBDBDB]  font-inter text-center md:text-start">
+              Automates chats, bookings, follow-ups, and customer 
+              support — 24/7
+            </p>
+
+            {/* Buttons */}
+            <div className="flex  items-center gap-4 pt-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative px-4 md:px-8 py-4 bg-gradient-to-r from-[#9810FA] to-[#AD46FF] rounded-2xl text-white font-medium font-inter text-lg flex items-center gap-2 shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all"
+              >
+                Start Free Trial
+                <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
+                className="px-4 md:px-8 py-4 border border-white/10 rounded-2xl text-white font-bold text-lg flex items-center gap-3 backdrop-blur-sm transition-all"
+              >
+                <div className="w-8 h-8  flex items-center justify-center">
+                  <FiPlay className="text-white" />
+                </div>
+                Schedule Demo
+              </motion.button>
+            </div>
+          </motion.div>
+
+          {/* Right Content - Video Animation */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="relative lg:h-[600px] flex items-center justify-center p-4"
+          >
+            <div className="relative w-full backdrop-blur-2xl shadow-2xl overflow-hidden p-2">
+               <video 
+                src="/hero.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover rounded-2xl "
+              />
+            </div>
+
+            {/* Decorative Shadow Blur under the video */}
+            <div className="absolute -bottom-10 w-[80%] h-10 bg-purple-600/20 blur-[40px] rounded-full mx-auto left-0 right-0" />
+          </motion.div>
+
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+export default Home;
