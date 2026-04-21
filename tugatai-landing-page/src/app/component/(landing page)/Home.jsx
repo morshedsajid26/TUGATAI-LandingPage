@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <section 
       id="home" 
-      className="relative  bg-black overflow-hidden flex items-center pt-24 pb-12"
+      className="relative  bg-[#000000] overflow-hidden flex items-center py-18 "
     >
 
       <Container >
-        <div className=" grid md:grid-cols-2 gap-5  items-center">
+        <div className=" grid md:grid-cols-2 gap-5  items-center ">
           
           {/* Left Content */}
           <motion.div
@@ -51,7 +51,7 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative px-4 md:px-8 py-4 bg-gradient-to-r from-[#9810FA] to-[#AD46FF] rounded-2xl text-white font-medium font-inter text-lg flex items-center gap-2 shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all"
+                className="group relative px-4 md:px-8 py-4 bg-gradient-to-r from-[#9810FA] to-[#AD46FF] rounded-2xl text-white font-medium font-inter text-base flex items-center gap-2 shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all"
               >
                 Start Free Trial
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -59,7 +59,7 @@ const Home = () => {
 
               <motion.button
                 whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
-                className="px-4 md:px-8 py-4 border border-white/10 rounded-2xl text-white font-bold text-lg flex items-center gap-3 backdrop-blur-sm transition-all"
+                className="px-4 md:px-8 py-4 border border-white/10 rounded-2xl text-white font-medium text-base flex items-center gap-3 backdrop-blur-sm transition-all"
               >
                 <div className="w-8 h-8  flex items-center justify-center">
                   <FiPlay className="text-white" />
@@ -75,9 +75,9 @@ const Home = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="relative lg:h-[600px] flex items-center justify-center p-4"
+            className=" flex items-center justify-center"
           >
-            <div className="relative w-full backdrop-blur-2xl shadow-2xl overflow-hidden p-2">
+            <div className="relative w-full backdrop-blur-2xl shadow-2xl overflow-hidden">
                <video 
                 src="/hero.mp4" 
                 autoPlay 
