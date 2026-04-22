@@ -7,27 +7,66 @@ import { motion } from 'framer-motion'
 
 const HalfMoonIcon = () => (
   <div className="transition-all duration-500 drop-shadow-none group-hover:drop-shadow-[0_0_15px_rgba(152,16,250,0.6)]">
-    <svg className="w-[56px] h-[56px]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M24 8 A16 16 0 0 1 24 40 Z" fill="#F3E8FF" />
-      <path d="M24 8 A16 16 0 0 0 24 40 Z" fill="#9810FA" />
-    </svg>
+    <div className='w-[56px] h-[56px] bg-[#D1CEFF] rounded-full'>
+      <svg
+        className="w-[56px] h-[56px]"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="moonGradient" x1="100%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#9810FA" />
+            <stop offset="100%" stopColor="#4F46E5" />
+          </linearGradient>
+        </defs>
+
+        <circle cx="24" cy="24" r="16" fill="#D1CEFF" />
+
+        <path
+          d="M24 8 A16 16 0 0 0 24 40 Z"
+          fill="url(#moonGradient)"
+        />
+      </svg>
+    </div>
   </div>
 )
 
 const FullMoonIcon = () => (
-  <div className="transition-all duration-500 drop-shadow-none group-hover:drop-shadow-[0_0_20px_rgba(152,16,250,0.8)]">
-    <svg className="w-[56px] h-[56px]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="24" cy="24" r="16" fill="#9810FA" />
-      <circle cx="24" cy="24" r="9" fill="#F3E8FF" />
-    </svg>
-  </div>
-)
+  <div className="w-[80px] h-[80px] flex items-center justify-center">
+    <svg width="64" height="64" viewBox="0 0 48 48">
+      <defs>
+        {/* Gradient ring */}
+        <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#9810FA" />
+          <stop offset="100%" stopColor="#4F46E5" />
+        </linearGradient>
 
-const MoonEnterpriseIcon = () => (
-  <div className="transition-all duration-500 drop-shadow-none group-hover:drop-shadow-[0_0_15px_rgba(243,232,255,0.4)]">
-    <svg className="w-[56px] h-[56px]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="24" cy="24" r="15" stroke="#F3E8FF" strokeWidth="2" fill="none" />
-      <circle cx="24" cy="24" r="8" fill="#F3E8FF" />
+        {/* Soft glow */}
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="0" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Outer circle */}
+      <circle cx="24" cy="24" r="20" fill="#D1CEFF" />
+
+      {/* Inner subtle fill */}
+      <circle cx="24" cy="24" r="12" fill="#C7C3E6" />
+
+      {/* Gradient ring */}
+      <circle
+        cx="24"
+        cy="24"
+        r="14"
+        fill="none"
+        stroke="url(#ringGradient)"
+        strokeWidth="3"
+        filter="url(#glow)"
+      />
     </svg>
   </div>
 )
@@ -70,7 +109,7 @@ const pricingPlans = [
     name: "Moon Enterprise",
     description: "For large teams with advanced needs",
     price: "499",
-    icon: <MoonEnterpriseIcon />,
+    icon: <FullMoonIcon />,
     features: [
       "Unlimited users",
       "Unlimited channels",
@@ -87,7 +126,7 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#000000] to-[#0A0614]">
+    <section className="py-20 ">
       <Container>
         <Header
           titleText={`Simple, Scalable Pricing`}

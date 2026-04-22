@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <section 
       id="home" 
-      className="relative  bg-[#000000] overflow-hidden flex items-center py-18 "
+      className="relative  bg-[#000000] overflow-hidden flex items-center py-10 "
     >
 
       <Container >
@@ -51,7 +51,7 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative px-4 md:px-8 py-4 bg-gradient-to-r from-[#9810FA] to-[#AD46FF] rounded-2xl text-white font-medium font-inter text-base flex items-center gap-2 shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all"
+                className="group relative px-2 md:px-8 py-4 bg-gradient-to-r from-[#9810FA] to-[#AD46FF] rounded-2xl text-white font-medium font-inter text-base flex items-center gap-2 shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all"
               >
                 Start Free Trial
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -59,9 +59,9 @@ const Home = () => {
 
               <motion.button
                 whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
-                className="px-4 md:px-8 py-4 border border-white/10 rounded-2xl text-white font-medium text-base flex items-center gap-3 backdrop-blur-sm transition-all"
+                className="px-2 md:px-8 py-4 border border-white/10 rounded-2xl text-white font-medium text-base flex items-center gap-3 backdrop-blur-sm transition-all"
               >
-                <div className="w-8 h-8  flex items-center justify-center">
+                <div className="w-7 h-7  flex items-center justify-center">
                   <FiPlay className="text-white" />
                 </div>
                 Schedule Demo
@@ -88,8 +88,7 @@ const Home = () => {
               />
             </div>
 
-            {/* Decorative Shadow Blur under the video */}
-            <div className="absolute -bottom-10 w-[80%] h-10 bg-purple-600/20 blur-[40px] rounded-full mx-auto left-0 right-0" />
+            
           </motion.div>
 
         </div>
