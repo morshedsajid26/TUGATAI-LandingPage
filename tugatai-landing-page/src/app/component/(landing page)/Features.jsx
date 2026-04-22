@@ -88,7 +88,7 @@ const Features = () => {
               key={feature.id} 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: false, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               className="col-span-12 md:col-span-6 bg-gradient-to-br from-[#1A1A27]  to-[#0F0F18] border border-white/10 rounded-3xl p-8 "
             >
@@ -115,7 +115,7 @@ const Features = () => {
               key={feature.id} 
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: false, margin: "-50px" }}
               transition={{ duration: 0.5, delay: 0.4 + (idx * 0.1) }}
               className=" md:col-span-3 col-span-12 bg-gradient-to-br from-[#1A1A27]  to-[#0F0F18] border border-white/10 rounded-[24px] py-10 px-6 flex flex-col items-center justify-center text-center  mt-2"
             >

@@ -4,6 +4,7 @@ import HowItWorks from './component/(landing page)/HowItWorks'
 import FAQ from './component/(landing page)/FAQ'
 import Call from './component/(landing page)/Call'
 import Features from './component/(landing page)/Features'
+import Pricing from './component/(landing page)/Pricing'
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
       <Call/>
       <HowItWorks/>
       <Features/>
+      <Pricing/>
       <FAQ/>
     </div>
   )
