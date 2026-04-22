@@ -141,7 +141,11 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="group relative flex flex-col p-8 rounded-4xl bg-[#12131C] border border-white/5 transition-all duration-500 hover:bg-gradient-to-r from-[#9810FA]/35  to-[#AD46FF]/35 hover:border-[#9810FA]/90 hover:shadow-[0_0_40px_rgba(173,70,255,0.2)] hover:-translate-y-10 cursor-pointer "
+              className={`group relative flex flex-col px-8 py-8 rounded-4xl bg-[#12131C] border transition-all duration-500 hover:bg-gradient-to-r from-[#9810FA]/35  to-[#AD46FF]/35 hover:border-[#9810FA]/90 hover:shadow-[0_0_40px_rgba(173,70,255,0.2)] hover:-translate-y-10 cursor-pointer border-white/5 ${
+                idx === 1 
+                  ? "z-10 md:-mt-10"
+                  : "border-white/5 z-0"
+              }`}
             >
               <div className="flex flex-col items-center text-center mb-8">
                 <div className="mb-4">

@@ -3,6 +3,7 @@ import React from "react";
 import Container from "../Container";
 import { motion } from "framer-motion";
 import { FiPlay, FiArrowRight } from "react-icons/fi";
+import { RiSparklingFill } from "react-icons/ri";
 
 const Home = () => {
   return (
@@ -30,7 +31,7 @@ const Home = () => {
               className="px-4 py-1.5 rounded-full border border-purple-500/30 bg-[#AD46FF]/10 backdrop-blur-sm "
             >
               <span className="text-sm font-inter font-medium text-purple-300 flex items-center gap-2 ">
-                <span className="w-2 h-2 rounded-full bg-purple-500 t " />
+                <RiSparklingFill className="text-[#AD46FF] w-5 h-5" />
                 AI-Powered Business Automation
               </span>
             </motion.div>
