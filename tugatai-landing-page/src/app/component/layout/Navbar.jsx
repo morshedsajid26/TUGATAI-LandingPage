@@ -149,9 +149,9 @@ const Navbar = () => {
             whileTap={{ scale: 0.98 }}
             className="hidden md:block"
           >
-            <Link href="/auth/login">
+            <Link href="/signup">
               <button className="bg-gradient-to-r from-[#9810FA] to-[#AD46FF] text-white font-bold text-base px-6 py-3 rounded-xl cursor-pointer shadow shadow-[#9810FA] hover:shadow-[#9810FA]/30 transition-shadow">
-               Sign In
+               Sign Up
               </button>
             </Link>
           </motion.div>
