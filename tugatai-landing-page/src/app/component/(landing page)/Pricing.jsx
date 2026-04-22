@@ -133,7 +133,7 @@ const Pricing = () => {
           subtitleText={`Choose the plan that fits your business. Upgrade or downgrade anytime`}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-25 mt-30  mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-25 mt-35  mx-auto">
           {pricingPlans.map((plan, idx) => (
             <motion.div
               key={idx}
