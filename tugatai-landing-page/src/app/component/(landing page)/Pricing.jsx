@@ -32,7 +32,7 @@ const HalfMoonIcon = () => (
 )
 
 const FullMoonIcon = () => (
-  <div className="w-[80px] h-[80px] flex items-center justify-center">
+  <div id='pricing' className="w-[80px] h-[80px] flex items-center justify-center">
     <svg width="64" height="64" viewBox="0 0 48 48">
       <defs>
         {/* Gradient ring */}

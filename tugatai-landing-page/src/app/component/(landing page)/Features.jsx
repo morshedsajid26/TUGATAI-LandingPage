@@ -74,7 +74,7 @@ const smallFeaturesData = [
 
 const Features = () => {
   return (
-    <section className="py-10">
+    <section id="feature" className="py-10">
       <Container>
         <Header
           titleText={`Core Features`}
