@@ -9,7 +9,7 @@ import Container from "../Container";
 
 const navitems = [
   { name: "Home", href: "home", isRoute: false },
-  { name: "Featured", href: "feature", isRoute: false },
+  { name: "Features", href: "feature", isRoute: false },
   { name: "Pricing", href: "pricing", isRoute: false },
   { name: "FAQ", href: "faq", isRoute: false },
 ];
@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="border-b border-white   ">
+    <div className="sticky top-0 z-[999] border-b border-white w-full bg-[#000000]">
       <Container>
         <motion.div
           initial={{ y: -20, opacity: 0 }}
@@ -81,7 +81,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-3xl cursor-pointer p-2 rounded-xl bg-[#AD46FF] transition-colors"
+            className="md:hidden text-3xl cursor-pointer p-2 rounded-xl bg-gradient-to-r from-[#9810FA] to-[#AD46FF] transition-colors"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -130,29 +130,29 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white mt-4 rounded-2xl shadow-xl border border-slate-100 overflow-hidden"
+              className="md:hidden absolute left-0 right-0 top-full w-full bg-[#000000] border-b border-white shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden z-40"
             >
-              <ul className="flex flex-col items-start gap-2 p-6">
+              <ul className="flex flex-col items-start gap-1 p-6 sm:px-8">
                 {navitems.map((item, index) => (
                   <motion.li
                     key={index}
                     className="w-full"
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.05 }}
                   >
                     {item.isRoute ? (
                       <Link
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className="py-3 px-4 font-inter text-lg font-medium text-slate-700 hover:bg-[#AD46FF]/20 hover:text-[#AD46FF] block rounded-xl transition-all"
+                        className="py-3.5 px-4 font-inter text-[17px] font-medium text-white hover:bg-gradient-to-r from-[#9810FA]/50 to-[#AD46FF]/50  hover:text-white block rounded-xl transition-all"
                       >
                         {item.name}
                       </Link>
                     ) : (
                       <button
                         onClick={() => scrollToSection(item.href, true)}
-                        className="py-3 px-4 font-inter text-lg font-medium text-slate-700 hover:bg-[#AD46FF]/20 hover:text-[#AD46FF] block rounded-xl transition-all w-full text-left"
+                        className="py-3.5 px-4 font-inter text-[17px] font-medium text-white hover:bg-gradient-to-r from-[#9810FA]/50 to-[#AD46FF]/50  hover:text-white block rounded-xl transition-all w-full text-left"
                       >
                         {item.name}
                       </button>
@@ -161,13 +161,13 @@ const Navbar = () => {
                 ))}
 
                 <motion.div
-                  className="w-full pt-4 mt-2 border-t border-slate-100"
+                  className="w-full pt-6 mt-2 border-t border-white/20"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 0.4 }}
+                  transition={{ delay: 0.2 }}
                 >
                   <Link href="/auth/login" onClick={() => setOpen(false)}>
-                    <button className="bg-gradient-to-r from-[#9810FA] to-[#AD46FF] w-full text-white font-bold text-lg px-4 py-4 rounded-xl shadow shadow-[#9810FA] transition-shadow">
+                    <button className="bg-gradient-to-r from-[#9810FA] to-[#AD46FF] w-full text-white font-bold text-[17px] px-4 py-4 rounded-xl shadow-[0_0_20px_rgba(152,16,250,0.4)] hover:shadow-[0_0_30px_rgba(152,16,250,0.6)] transition-all">
                       Sign In
                     </button>
                   </Link>
