@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-[999] border-b border-white w-full bg-[#000000]">
+    <div className="sticky top-0 z-[999] border-b border-white/80 w-full bg-[#000000]">
       <Container>
         <motion.div
           initial={{ y: -20, opacity: 0 }}
@@ -130,7 +130,7 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden absolute left-0 right-0 top-full w-full bg-[#000000] border-b border-white shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden z-40"
+              className="md:hidden absolute left-0 right-0 top-full w-full bg-[#000000] border-b border-white/80 shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden z-40"
             >
               <ul className="flex flex-col items-start gap-1 p-6 sm:px-8">
                 {navitems.map((item, index) => (
