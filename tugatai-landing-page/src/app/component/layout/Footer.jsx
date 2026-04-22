@@ -64,8 +64,8 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-inter font-semibold mb-2">Product</h4>
-            <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Features</Link>
-            <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Pricing</Link>
+            <Link href="#feature" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Features</Link>
+            <Link href="#pricing" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Pricing</Link>
           </div>
 
           <div className="flex flex-col gap-4">
