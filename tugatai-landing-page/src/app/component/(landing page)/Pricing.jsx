@@ -133,7 +133,7 @@ const Pricing = () => {
           subtitleText={`Choose the plan that fits your business. Upgrade or downgrade anytime`}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-25 mt-25  mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-25 mt-30  mx-auto">
           {pricingPlans.map((plan, idx) => (
             <motion.div
               key={idx}
@@ -143,7 +143,7 @@ const Pricing = () => {
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               className={`group relative flex flex-col px-8 py-8 rounded-4xl bg-[#12131C] border transition-all duration-500 hover:bg-gradient-to-r from-[#9810FA]/35  to-[#AD46FF]/35 hover:border-[#9810FA]/90 hover:shadow-[0_0_40px_rgba(173,70,255,0.2)] hover:-translate-y-10 cursor-pointer border-white/5 ${
                 idx === 1 
-                  ? "z-10 md:-mt-10"
+                  ? "z-10 md:-mt-20"
                   : "border-white/5 z-0"
               }`}
             >
