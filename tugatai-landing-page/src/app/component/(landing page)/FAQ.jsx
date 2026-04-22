@@ -12,31 +12,31 @@ const faqs = [
   },
   {
     question: "Can I customize the AI responses?",
-    answer: "Our AI is powered by advanced GPT-4 technology, trained specifically for business operations. It understands natural language, maintains context across conversations, and learns from your business rules to provide accurate responses and take appropriate actions like creating quotes, scheduling bookings, and updating your CRM."
+    answer: "Yes! You have full control over how AI responds. You can set custom response templates, define business rules, configure pricing logic, and train the AI on your specific products and services. The AI adapts to your brand voice and business processes."
   },
   {
     question: "How fast is the setup process?",
-    answer: "Our AI is powered by advanced GPT-4 technology, trained specifically for business operations. It understands natural language, maintains context across conversations, and learns from your business rules to provide accurate responses and take appropriate actions like creating quotes, scheduling bookings, and updating your CRM."
+    answer: "Most businesses are fully operational within 5–10 minutes. Simply connect your communication channels (WhatsApp, SMS, etc.), configure your basic business rules, and the AI is ready to handle customer conversations. Our team provides free migration support if you need help."
   },
   {
     question: "Which platforms are supported?",
-    answer: "Our AI is powered by advanced GPT-4 technology, trained specifically for business operations. It understands natural language, maintains context across conversations, and learns from your business rules to provide accurate responses and take appropriate actions like creating quotes, scheduling bookings, and updating your CRM."
+    answer: "We support all major communication channels: WhatsApp Business, SMS, Facebook Messenger, Instagram DM, Telegram, web chat widget, and email. All conversations appear in one unified inbox, and AI responds across all channels automatically."
   },
   {
     question: "What happens if the AI doesn't understand something?",
-    answer: "Our AI is powered by advanced GPT-4 technology, trained specifically for business operations. It understands natural language, maintains context across conversations, and learns from your business rules to provide accurate responses and take appropriate actions like creating quotes, scheduling bookings, and updating your CRM."
+    answer: "The AI is designed to handle complex conversations, but if it encounters something it can't answer, it will automatically escalate to your team. You can also set up custom fallback responses and specify when human intervention is needed."
   },
   {
     question: "Is my data secure?",
-    answer: "Our AI is powered by advanced GPT-4 technology, trained specifically for business operations. It understands natural language, maintains context across conversations, and learns from your business rules to provide accurate responses and take appropriate actions like creating quotes, scheduling bookings, and updating your CRM."
+    answer: "Absolutely. We use enterprise-grade encryption for all data, comply with GDPR and SOC 2 standards, and store all information on secure cloud infrastructure. Your business data and customer conversations are completely private and never used to train other AI models."
   },
   {
     question: "Can I integrate with my existing tools?",
-    answer: "Our AI is powered by advanced GPT-4 technology, trained specifically for business operations. It understands natural language, maintains context across conversations, and learns from your business rules to provide accurate responses and take appropriate actions like creating quotes, scheduling bookings, and updating your CRM."
+    answer: "Yes! We offer integrations with popular CRM systems (Salesforce, HubSpot), calendar apps (Google Calendar, Outlook), payment processors, and more. Our API also allows custom integrations with your existing business systems."
   },
   {
     question: "What kind of support do you provide?",
-    answer: "Our AI is powered by advanced GPT-4 technology, trained specifically for business operations. It understands natural language, maintains context across conversations, and learns from your business rules to provide accurate responses and take appropriate actions like creating quotes, scheduling bookings, and updating your CRM."
+    answer: "All plans include email support. Full Moon and Enterprise plans get priority support with faster response times. Enterprise customers also receive a dedicated account manager and 24/7 phone support. We also offer free onboarding and migration assistance for all customers."
   }
 ];
 
