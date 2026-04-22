@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiX, FiMenu } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -16,8 +16,34 @@ const navitems = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
   const router = useRouter();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-30% 0px -70% 0px" }
+    );
+
+    // Initial check for elements
+    setTimeout(() => {
+      navitems.forEach((item) => {
+        if (!item.isRoute) {
+          const el = document.getElementById(item.href);
+          if (el) observer.observe(el);
+        }
+      });
+    }, 100);
+
+    return () => observer.disconnect();
+  }, [pathname]);
 
   const scrollToSection = (id, closeMenu = false) => {
     if (closeMenu) setOpen(false);
@@ -94,14 +120,22 @@ const Navbar = () => {
                 {item.isRoute ? (
                   <Link
                     href={item.href}
-                    className="py-2 px-4 font-inter text-lg font-medium text-white hover:text-[#AD46FF] transition-colors rounded-lg"
+                    className={`py-2 px-4 font-inter text-lg font-medium transition-colors rounded-lg cursor-pointer ${
+                      activeSection === item.href
+                        ? "text-[#AD46FF] "
+                        : "text-white hover:text-[#AD46FF]"
+                    }`}
                   >
                     {item.name}
                   </Link>
                 ) : (
                   <button
                     onClick={() => scrollToSection(item.href)}
-                    className="py-2 px-4 font-inter text-lg font-medium text-white hover:text-[#AD46FF] transition-colors rounded-lg cursor-pointer"
+                    className={`py-2 px-4 font-inter text-lg font-medium transition-colors rounded-lg cursor-pointer ${
+                      activeSection === item.href
+                        ? "text-[#AD46FF]"
+                        : "text-white hover:text-[#AD46FF]"
+                    }`}
                   >
                     {item.name}
                   </button>
@@ -145,14 +179,22 @@ const Navbar = () => {
                       <Link
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className="py-3.5 px-4 font-inter text-[17px] font-medium text-white hover:bg-gradient-to-r from-[#9810FA]/50 to-[#AD46FF]/50  hover:text-white block rounded-xl transition-all"
+                        className={`py-3.5 px-4 font-inter text-[17px] font-medium block rounded-xl transition-all ${
+                          activeSection === item.href
+                            ? "text-white bg-gradient-to-r from-[#9810FA]/50 to-[#AD46FF]/50"
+                            : "text-white hover:bg-gradient-to-r hover:from-[#9810FA]/50 hover:to-[#AD46FF]/50"
+                        }`}
                       >
                         {item.name}
                       </Link>
                     ) : (
                       <button
                         onClick={() => scrollToSection(item.href, true)}
-                        className="py-3.5 px-4 font-inter text-[17px] font-medium text-white hover:bg-gradient-to-r from-[#9810FA]/50 to-[#AD46FF]/50  hover:text-white block rounded-xl transition-all w-full text-left"
+                        className={`py-3.5 px-4 font-inter text-[17px] font-medium block rounded-xl transition-all w-full text-left ${
+                          activeSection === item.href
+                            ? "text-white bg-gradient-to-r from-[#9810FA]/50 to-[#AD46FF]/50"
+                            : "text-white hover:bg-gradient-to-r hover:from-[#9810FA]/50 hover:to-[#AD46FF]/50"
+                        }`}
                       >
                         {item.name}
                       </button>
