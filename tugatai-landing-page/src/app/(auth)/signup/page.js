@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import InputField from '../../component/InputField';
 import Dropdown from '../../component/Dropdown';
 import Image from 'next/image';
+import Password from '@/app/component/Password';
 
 const Signup = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,26 +20,26 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center py-10 px-4">
-      <div className="bg-black rounded-[24px] w-full max-w-[600px] h-[800px] px-2 md:py-7 py-5  md:px-14   shadow-2xl">
+      <div className="bg-white rounded-[24px] w-full max-w-[600px] h-[800px] px-2 md:py-7 py-5  md:px-14   shadow-2xl">
         
         {/* Logo and Header */}
         <div className="flex flex-col items-center mb-8">
           <div className="bg-[#EA2B33] rounded-xl flex items-center justify-center mb-5">
             <Image src={'/logo.png'} alt='logo' width={60} height={100} />
           </div>
-          <h1 className="text-[28px] font-medium text-white mb-2 tracking-tight">Sign up</h1>
-          <p className="text-[#ffffff]/50 text-[13px] text-center">Set up a new business account with all required information</p>
+          <h1 className="text-[28px] font-medium text-black mb-2 tracking-tight">Sign up</h1>
+          <p className="text-[#5B5B5B] text-[13px] text-center">Set up a new business account with all required information</p>
         </div>
 
         {/* Navigation Pills */}
-        <div className="bg-[#F1F3F5] p-1.5 rounded-full flex justify-between mb-8">
+        <div className="bg-[#EDEDED] p-1.5 rounded-full flex justify-between mb-8">
           {tabs.map((tab, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
               className={`flex-1 text-center py-2 text-sm rounded-full transition-all duration-300 font-bold ${
                 activeTab === index 
-                  ? 'bg-black text-white shadow-sm' 
+                  ? 'bg-white text-black' 
                   : 'text-[#000000]'
               }`}
             >
@@ -76,10 +77,10 @@ const Signup = () => {
                 />
                 
                 <div className="flex flex-col w-full gap-2">
-                  <label className="font-inter text-[#ffffff] text-[13px] font-semibold">Description</label>
+                  <label className="font-inter text-[#000000] text-[13px] font-semibold">Description</label>
                   <textarea 
                     placeholder="Brief description of the business..."
-                    className="border border-[#D1D5DC] outline-none p-3 text-sm text-[#ffffff] placeholder:text-[#0A0A0A]/50 rounded-xl w-full min-h-[90px] resize-none"
+                    className="border border-[#D1D5DC] outline-none p-3 text-sm text-[#000000] placeholder:text-[#0A0A0A]/50 rounded-xl w-full min-h-[90px] resize-none"
                   ></textarea>
                 </div>
               </>
@@ -108,12 +109,13 @@ const Signup = () => {
                   labelClass="text-[13px] font-semibold"
                   inputClass="!p-3 !text-sm !rounded-xl"
                 />
-                <InputField 
-                  label="Initial Password" 
-                  placeholder="Create password" 
-                  type="password"
-                  labelClass="text-[13px] font-semibold"
-                  inputClass="!p-3 !text-sm !rounded-xl"
+
+                <Password
+                label = "Initial Password"
+                placeholder="Create password"
+                type="password"
+                labelClass="text-[13px] font-semibold"
+                inputClass="!p-3 !text-sm !rounded-xl"
                 />
               </>
             )}
