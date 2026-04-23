@@ -208,9 +208,9 @@ const Navbar = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <Link href="/auth/login" onClick={() => setOpen(false)}>
+                  <Link href="/signup" onClick={() => setOpen(false)}>
                     <button className="bg-gradient-to-r from-[#9810FA] to-[#AD46FF] w-full text-white font-bold text-[17px] px-4 py-4 rounded-xl shadow-[0_0_20px_rgba(152,16,250,0.4)] hover:shadow-[0_0_30px_rgba(152,16,250,0.6)] transition-all">
-                      Sign In
+                      Sign Up
                     </button>
                   </Link>
                 </motion.div>
