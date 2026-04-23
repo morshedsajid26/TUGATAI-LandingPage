@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <section 
       id="home" 
-      className="relative  bg-[#000000] overflow-hidden flex items-center py-10 "
+      className="relative  bg-[#000000] overflow-hidden flex items-center py-20 "
     >
 
       <Container >
