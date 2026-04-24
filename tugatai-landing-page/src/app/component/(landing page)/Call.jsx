@@ -1,10 +1,10 @@
-"use client"
-import React, { useState, useRef, useEffect } from 'react';
+"use client";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Container from '../Container';
-import { IoChevronDown } from 'react-icons/io5';
+import Container from "../Container";
+import { IoChevronDown } from "react-icons/io5";
 
-import { countries } from './countries';
+import { countries } from "./countries";
 
 const Call = () => {
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
@@ -21,15 +21,14 @@ const Call = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
   return (
-    <section id="demo" className='relative bg-gradient-to-t from-[#000000] via-[#1A0B2E] to-[#000000] py-20 overflow-hidden'>
+    <section
+      id="demo"
+      className="relative bg-gradient-to-t from-[#000000] via-[#1A0B2E] to-[#000000] py-20 overflow-hidden"
+    >
       <Container className="flex flex-col items-center gap-16">
-        
-       
-
         <div className="md:grid grid-cols-12 space-y-8 md:space-y-0  w-full mx-auto items-center ">
-          
           {/* Left Content - Call Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
@@ -40,24 +39,26 @@ const Call = () => {
               <h3 className="text-2xl font-bold font-inter text-white text-center">
                 Get a call
               </h3>
-              
+
               <div className="flex flex-col gap-4 mt-2 ">
                 {/* Phone Input */}
                 <div className="relative flex items-center border border-white rounded-xl overflow-visible focus-within:border-[#AD46FF]/50 transition-colors">
                   <div className="relative" ref={dropdownRef}>
-                    <button 
+                    <button
                       type="button"
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                       className="flex items-center gap-2 pl-4 pr-2 py-3 border-r border-white/90  transition-colors cursor-pointer rounded-l-xl"
                     >
-                      <img 
-                        src={`https://flagcdn.com/w40/${selectedCountry.code.toLowerCase()}.png`} 
+                      <img
+                        src={`https://flagcdn.com/w40/${selectedCountry.code.toLowerCase()}.png`}
                         alt={selectedCountry.name}
                         className="w-6 h-4 rounded-[3px] object-cover"
                       />
-                      <IoChevronDown className={`text-transparent text-sm transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                      <IoChevronDown
+                        className={`text-transparent text-sm transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
+                      />
                     </button>
-                    
+
                     <AnimatePresence>
                       {isDropdownOpen && (
                         <motion.div
@@ -76,15 +77,19 @@ const Call = () => {
                                   setSelectedCountry(country);
                                   setIsDropdownOpen(false);
                                 }}
-                                className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors text-left ${selectedCountry.code === country.code ? 'bg-white/5' : ''}`}
+                                className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors text-left ${selectedCountry.code === country.code ? "bg-white/5" : ""}`}
                               >
-                                <img 
-                                  src={`https://flagcdn.com/w40/${country.code.toLowerCase()}.png`} 
+                                <img
+                                  src={`https://flagcdn.com/w40/${country.code.toLowerCase()}.png`}
                                   alt={country.name}
                                   className="w-6 h-4 rounded-[3px] object-cover shrink-0"
                                 />
-                                <span className="text-white/90 font-inter text-sm flex-1">{country.name}</span>
-                                <span className="text-white/50 font-inter text-sm">{country.dialCode}</span>
+                                <span className="text-white/90 font-inter text-sm flex-1">
+                                  {country.name}
+                                </span>
+                                <span className="text-white/50 font-inter text-sm">
+                                  {country.dialCode}
+                                </span>
                               </button>
                             ))}
                           </div>
@@ -94,20 +99,22 @@ const Call = () => {
                   </div>
 
                   <div className="flex items-center bg-transparent w-full">
-                    <span className="text-white text-sm font-inter pl-3">{selectedCountry.dialCode}</span>
-                    <input 
-                      type="tel" 
-                      placeholder="Enter phone number" 
+                    <span className="text-white text-sm font-inter pl-3">
+                      {selectedCountry.dialCode}
+                    </span>
+                    <input
+                      type="tel"
+                      placeholder="Enter phone number"
                       className="w-full bg-transparent text-white px-2 py-3.5 outline-none text-sm font-inter placeholder:text-white/30"
                     />
                   </div>
-                </div>  
+                </div>
 
                 {/* Email Input */}
                 <div className="relative flex items-center  border border-white rounded-xl overflow-hidden focus-within:border-[#AD46FF]/50 transition-colors">
-                  <input 
-                    type="email" 
-                    placeholder="Enter email address" 
+                  <input
+                    type="email"
+                    placeholder="Enter email address"
                     className="w-full bg-transparent text-white px-4 py-3.5 outline-none text-sm font-inter placeholder:text-white/30"
                   />
                 </div>
@@ -130,25 +137,20 @@ const Call = () => {
           >
             {/* The Video Container */}
             <div className="relative w-full aspect-video md:aspect-[16/10]  rounded-3xl">
-               <video 
-                src="/AiVoice.mp4" 
-                autoPlay 
-                loop 
-                muted 
+              <video
+                src="/AiVoice.mp4"
+                autoPlay
+                loop
+                muted
                 playsInline
                 className="w-full object-cover rounded-3xl opacity-90 group-hover:opacity-100 transition-opacity duration-500 relative z-10"
               />
-           
             </div>
-
-            
-           
           </motion.div>
-          
         </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
 export default Call;

@@ -7,14 +7,12 @@ import { RiSparklingFill } from "react-icons/ri";
 
 const Home = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative  bg-[#000000] overflow-hidden flex items-center py-20 "
     >
-
-      <Container >
+      <Container>
         <div className=" grid md:grid-cols-2 gap-5  items-center ">
-          
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -38,13 +36,12 @@ const Home = () => {
 
             {/* Heading */}
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient bg-gradient-to-r from-[#ffffff] via-[#E9D4FF] to-[#ffffff] bg-clip-text text-transparent leading-[1.1] font-inter text-center md:text-start">
-            AI Voice & Chat Agent for Business
+              AI Voice & Chat Agent for Business
             </h1>
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-[#DBDBDB]  font-inter text-center md:text-start">
-              Automates chats, bookings, follow-ups, and customer 
-              support — 24/7
+              Automates chats, bookings, follow-ups, and customer support — 24/7
             </p>
 
             {/* Buttons */}
@@ -59,7 +56,10 @@ const Home = () => {
               </motion.button>
 
               <motion.button
-                whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
+                whileHover={{
+                  scale: 1.02,
+                  backgroundColor: "rgba(255,255,255,0.05)",
+                }}
                 className="px-2 md:px-8 py-4 border border-white/10 rounded-2xl text-white font-medium text-base flex items-center gap-3 backdrop-blur-sm transition-all"
               >
                 <div className="w-7 h-7  flex items-center justify-center">
@@ -79,19 +79,16 @@ const Home = () => {
             className=" flex items-center justify-center"
           >
             <div className="relative w-full backdrop-blur-2xl shadow-2xl overflow-hidden">
-               <video 
-                src="/hero.mp4" 
-                autoPlay 
-                loop 
-                muted 
+              <video
+                src="/hero.mp4"
+                autoPlay
+                loop
+                muted
                 playsInline
                 className="w-full h-full object-cover rounded-2xl "
               />
             </div>
-
-            
           </motion.div>
-
         </div>
       </Container>
     </section>
