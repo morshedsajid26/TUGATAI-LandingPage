@@ -34,9 +34,9 @@ const Footer = () => {
                   <p className="text-2xl font-bold text-[#EB232D] font-inter uppercase">
                       Tugatai
                   </p>
-                  <span className="text-xs font-inter text-[#1E8380]">
+                  {/* <span className="text-xs font-inter text-[#1E8380]">
                       Cargo Logistics
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </Link>

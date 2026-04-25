@@ -98,9 +98,9 @@ const Navbar = () => {
                     TUGATAI
                 </p>
 
-                <span className="text-xs font-marope text-[#1E8380]">
+                {/* <span className="text-xs font-marope text-[#1E8380]">
                     Cargo Logistics
-                </span>
+                </span> */}
               </div>
             </motion.div>
           </Link>
