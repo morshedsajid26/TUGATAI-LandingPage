@@ -22,7 +22,7 @@ const Call = () => {
   }, []);
   return (
     <section
-      id="demo"
+      id="contact"
       className="relative bg-gradient-to-t from-[#000000] via-[#1A0B2E] to-[#000000] py-20 overflow-hidden"
     >
       <Container className="flex flex-col items-center gap-16">

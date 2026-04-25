@@ -148,13 +148,13 @@ const Signup = () => {
                   labelClass="text-[13px] font-semibold"
                   inputClass="!p-3 !text-sm !rounded-xl"
                 />
-                <InputField
+                {/* <InputField
                   label="Trial Period (days)"
                   placeholder="14"
                   type="number"
                   labelClass="text-[13px] font-semibold"
                   inputClass="!p-3 !text-sm !rounded-xl"
-                />
+                /> */}
               </>
             )}
           </div>
