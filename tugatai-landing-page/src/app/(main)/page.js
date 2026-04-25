@@ -5,6 +5,8 @@ import FAQ from '../component/(landing page)/FAQ'
 import Call from '../component/(landing page)/Call'
 import Features from '../component/(landing page)/Features'
 import Pricing from '../component/(landing page)/Pricing'
+import Testimonial from '../component/(landing page)/Testimonial'
+import Stats from '../component/(landing page)/Stats'
 
 const page = () => {
   return (
@@ -13,8 +15,10 @@ const page = () => {
       <HowItWorks/>
       <Call/>
       <Features/>
+      <Stats/>
       <Pricing/>
       <FAQ/>
+      <Testimonial/>
     </div>
   )
 }
