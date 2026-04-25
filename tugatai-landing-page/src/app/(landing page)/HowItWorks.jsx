@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import Header from "../Header";
+import Header from "../component/Header";
 import { motion } from "framer-motion";
-import Container from "../Container";
-import { 
-  FiMessageSquare, 
-  FiZap, 
-  FiFileText, 
-  FiCalendar, 
+import Container from "../component/Container";
+import {
+  FiMessageSquare,
+  FiZap,
+  FiFileText,
+  FiCalendar,
   FiDatabase,
   FiCheckCircle,
   FiChevronRight
@@ -16,7 +16,7 @@ import {
 const StepCard = ({ icon: Icon, title, description, iconBg, isLast }) => {
   return (
     <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
-      <motion.div 
+      <motion.div
         whileHover={{ y: -8, borderColor: "rgba(255,255,255,0.2)" }}
         className="relative px-6 py-8 rounded-[2rem] border border-white/5 bg-gradient-to-br from-[#1A1A27]  to-[#0F0F18] backdrop-blur-2xl flex flex-col items-start justify-center gap-4 transition-colors w-full "
       >
@@ -105,9 +105,9 @@ const HowItWorks = () => {
                 transition={{ delay: index * 0.15, duration: 0.5 }}
                 className=""
               >
-                <StepCard 
-                  {...step} 
-                  isLast={index === steps.length - 1} 
+                <StepCard
+                  {...step}
+                  isLast={index === steps.length - 1}
                 />
               </motion.div>
             ))}
@@ -129,7 +129,7 @@ const HowItWorks = () => {
         </div>
       </Container>
 
-      
+
     </section>
   );
 };

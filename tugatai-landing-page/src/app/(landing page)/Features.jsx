@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Container from "../Container";
-import Header from "../Header";
+import Container from "../component/Container";
+import Header from "../component/Header";
 import {
   FiMessageSquare,
   FiCalendar,

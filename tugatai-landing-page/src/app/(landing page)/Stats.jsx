@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import Container from '../Container';
+import Container from '../component/Container';
 import { LuTrendingUp, LuZap, LuTarget, LuBot } from "react-icons/lu";
-import Header from '../Header';
+import Header from '../component/Header';
 import { motion } from 'framer-motion';
 
 const statsData = [
@@ -49,7 +49,7 @@ const Stats = () => {
     <section className="py-10 bg-[#000000] relative" id="stats">
       <Container>
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -61,21 +61,21 @@ const Stats = () => {
             <span className="text-sm text-purple-300 font-medium">Proven Results</span>
           </div>
           <Header
-          className="text-center"
-          titleText="Real Results. Real Growth."
-          subtitleText="Our AI system helps businesses automate operations and increase conversions."
+            className="text-center"
+            titleText="Real Results. Real Growth."
+            subtitleText="Our AI system helps businesses automate operations and increase conversions."
           />
         </motion.div>
 
         {/* Grid Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {statsData.map((stat, index) => (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              key={stat.id} 
+              key={stat.id}
               className="bg-gradient-to-br from-[#1A1A2E]  to-[#0F0F1A] border border-[#AD46FF33] rounded-3xl p-8 hover:bg-[#131318] transition-colors duration-300"
             >
               <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-white mb-8 ${stat.iconBg} ${stat.shadow}`}>
@@ -89,14 +89,14 @@ const Stats = () => {
         </div>
 
         {/* Bottom Banner */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="bg-gradient-to-b from-[#AD46FF]/10  to-[#9810FA]/5 border border-[#AD46FF]/20 rounded-2xl p-10 text-center mx-auto w-fit   "
         >
-          
+
           <div className="">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
               Join 500+ businesses already growing with MoonAI

@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
-import Header from '../Header'
-import Container from '../Container'
+import Header from '../component/Header'
+import Container from '../component/Container'
 import { FiCheck } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
@@ -141,11 +141,10 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className={`group relative flex flex-col px-8 py-8 rounded-4xl bg-[#12131C] border transition-all duration-500 hover:bg-gradient-to-r from-[#9810FA]/35  to-[#AD46FF]/35 hover:border-[#9810FA]/90 hover:shadow-[0_0_40px_rgba(173,70,255,0.2)] hover:-translate-y-10  border-white/5 ${
-                idx === 1 
+              className={`group relative flex flex-col px-8 py-8 rounded-4xl bg-[#12131C] border transition-all duration-500 hover:bg-gradient-to-r from-[#9810FA]/35  to-[#AD46FF]/35 hover:border-[#9810FA]/90 hover:shadow-[0_0_40px_rgba(173,70,255,0.2)] hover:-translate-y-10  border-white/5 ${idx === 1
                   ? "z-10 md:-mt-20"
                   : "border-white/5 z-0"
-              }`}
+                }`}
             >
               <div className="flex flex-col items-center text-center mb-8">
                 <div className="mb-4">

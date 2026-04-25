@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Container from "../Container";
+import Container from "../component/Container";
 import { motion } from "framer-motion";
 import { FiPlay, FiArrowRight } from "react-icons/fi";
 import { RiSparklingFill } from "react-icons/ri";

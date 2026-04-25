@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Container from "../Container";
+import Container from "../component/Container";
 import { IoChevronDown } from "react-icons/io5";
 
 import { countries } from "./countries";

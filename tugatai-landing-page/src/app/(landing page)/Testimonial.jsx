@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Container from '../Container';
-import Header from '../Header';
+import Container from '../component/Container';
+import Header from '../component/Header';
 import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -52,7 +52,7 @@ const Testimonial = () => {
     <section className="py-10 bg-[#050505] relative" id="testimonials">
       <Container>
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -71,7 +71,7 @@ const Testimonial = () => {
         </motion.div>
 
         {/* Cards Slider */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -133,7 +133,7 @@ const Testimonial = () => {
         </motion.div>
 
         {/* Footer CTA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}

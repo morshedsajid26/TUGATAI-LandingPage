@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Header from "../Header";
-import FAQdropdown from "../FAQdropdown";
-import Container from "../Container";
+import Header from "../component/Header";
+import FAQdropdown from "../component/FAQdropdown";
+import Container from "../component/Container";
 import { motion } from "framer-motion";
 
 const faqs = [
