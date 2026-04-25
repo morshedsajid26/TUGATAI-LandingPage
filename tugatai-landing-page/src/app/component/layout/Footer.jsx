@@ -81,7 +81,7 @@ const Footer = () => {
 
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-inter font-semibold mb-2">Legal</h4>
-            <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Privacy Policy</Link>
             <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Terms of Service</Link>
           </div>
         </motion.div>
