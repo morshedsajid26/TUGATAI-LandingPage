@@ -70,7 +70,7 @@ const Footer = () => {
 
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-inter font-semibold mb-2">Company</h4>
-            <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">About</Link>
+            <Link href="/about" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">About</Link>
             <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Contact</Link>
           </div>
 
