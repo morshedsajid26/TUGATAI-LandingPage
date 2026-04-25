@@ -15,7 +15,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12"
         >
           {/* Logo & Description */}
           <div className="lg:col-span-2 flex flex-col gap-6">
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 ">
             <h4 className="text-white font-inter font-semibold mb-2">Product</h4>
             <Link href="#feature" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Features</Link>
             <Link href="#pricing" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Pricing</Link>
@@ -74,15 +74,15 @@ const Footer = () => {
             <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Contact</Link>
           </div>
 
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <h4 className="text-white font-inter font-semibold mb-2">Resources</h4>
             <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Help Center</Link>
-          </div>
+          </div> */}
 
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-inter font-semibold mb-2">Legal</h4>
             <Link href="/privacy" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Terms of Service</Link>
+            <Link href="/termscondition" className="text-sm font-inter text-[#CDCDCD] hover:text-[#AD46FF] transition-colors">Terms of Service</Link>
           </div>
         </motion.div>
 
