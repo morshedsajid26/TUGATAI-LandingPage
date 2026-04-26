@@ -51,7 +51,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
                 className="group relative px-2 md:px-8 py-4 bg-gradient-to-r from-[#9810FA] to-[#AD46FF] rounded-2xl text-white font-medium font-inter text-base flex items-center gap-2 shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.5)] transition-all"
               >
-                Start Free Trial
+               Book Live Demo
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
 

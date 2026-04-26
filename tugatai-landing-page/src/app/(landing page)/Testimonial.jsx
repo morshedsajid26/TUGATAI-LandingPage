@@ -142,7 +142,7 @@ const Testimonial = () => {
         >
           <p className="text-[#9CA3AF] mb-6 text-lg">Ready to see similar results for your business?</p>
           <button className="bg-gradient-to-r from-[#9810FA] to-[#AD46FF] px-8 py-3.5 rounded-full text-white font-bold text-lg shadow-[0_0_30px_rgba(152,16,250,0.5)] hover:scale-105 transition-transform duration-300">
-            Start Your Free Trial
+            Book Live Demo
           </button>
         </motion.div>
       </Container>

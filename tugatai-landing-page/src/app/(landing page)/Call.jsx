@@ -37,7 +37,7 @@ const Call = () => {
           >
             <div className="bg-[#050925] backdrop-blur-xl  rounded-3xl py-16 px-6 shadow-2xl flex flex-col gap-6 md:w-[420px]">
               <h3 className="text-2xl font-bold font-inter text-white text-center">
-                Get a call
+                Voice AI Test
               </h3>
 
               <div className="flex flex-col gap-4 mt-2 ">
