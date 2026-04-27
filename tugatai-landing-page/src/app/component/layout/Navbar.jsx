@@ -32,7 +32,7 @@ const Navbar = () => {
       { rootMargin: "-30% 0px -70% 0px" }
     );
 
-    // Initial check for elements
+    
     setTimeout(() => {
       navitems.forEach((item) => {
         if (!item.isRoute) {
@@ -58,7 +58,7 @@ const Navbar = () => {
     if (pathname !== "/") {
       router.push(`/#${id}`);
     } else {
-      // wait for mobile menu close animation before scrolling
+      
       setTimeout(doScroll, closeMenu ? 350 : 0);
     }
   };
