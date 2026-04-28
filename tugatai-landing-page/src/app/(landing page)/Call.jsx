@@ -37,7 +37,7 @@ const Call = () => {
           >
             <div className="bg-[#050925] backdrop-blur-xl  rounded-3xl py-16 px-6 shadow-2xl flex flex-col gap-6 md:w-[420px]">
               <h3 className="text-2xl font-bold font-inter text-white text-center">
-                Real voice AI test call
+               Connect with us
               </h3>
 
               <div className="flex flex-col gap-4 mt-2 ">
@@ -121,7 +121,7 @@ const Call = () => {
 
                 {/* Submit Button */}
                 <button className="w-full bg-gradient-to-r from-[#9810FA] to-[#AD46FF] hover:bg-[#9810FA] text-white font-inter font-semibold py-3.5 rounded-xl shadow-[0_0_20px_rgba(173,70,255,0.3)] hover:shadow-[0_0_25px_rgba(173,70,255,0.5)] transition-all mt-2">
-                  Test Call
+                  Get a call
                 </button>
               </div>
             </div>
